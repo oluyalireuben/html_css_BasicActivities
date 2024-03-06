@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overlapping Images</title>
+  <style>
+    .image-container {
+      position: relative;
+    }
+
+    .image-container img {
+      position: absolute;
+    }
+
+    #image1 {
+      z-index: 1;
+    }
+
+    #image2 {
+      z-index: 2;
+      top: 20px; /* Adjust the positioning as needed */
+      left: 20px; /* Adjust the positioning as needed */
+    }
+  </style>
+</head>
+<body>
+<div class="image-container">
+  <img id="image1" src="signup.png" alt="Image 1" width="300">
+  <img id="image2" src="splash_image.png" alt="Image 2" width="300">
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kabarak Syllabus</title>
+  <style>
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    ul.main-list {
+      display: block;
+      position: relative;
+    }
+
+    ul.main-list > li {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    ul.main-list > li:before {
+      content: '\2192'; /* Unicode character for right arrow */
+      position: absolute;
+      left: 0;
+      top: 4px;
+      color: #0066cc; /* Arrow color */
+      font-size: 18px;
+    }
+
+    ul.sub-list {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+<h2>Kabarak Syllabus</h2>
+<ul class="main-list">
+  <li>Unit 1: Introduction to AJWT
+    <ul class="sub-list">
+      <li>Overview of AJWT</li>
+      <li>History and Evolution</li>
+      <li>Key Concepts</li>
+    </ul>
+  </li>
+  <li>Unit 2: Advanced Topics
+    <ul class="sub-list">
+      <li>Authentication and Authorization</li>
+      <li>JSON Web Tokens (JWT)</li>
+      <li>Web Token Handling</li>
+    </ul>
+  </li>
+  <li>Unit 3: Practical Applications
+    <ul class="sub-list">
+      <li>Implementing AJWT in Web Development</li>
+      <li>Security Considerations</li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

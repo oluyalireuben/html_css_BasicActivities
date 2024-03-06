@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Timetable</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: blue;
+      color: white;
+    }
+
+    td.day {
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+    td.lunch {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+<h2>Class Timetable</h2>
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+  <tr>
+    <td>9:00 AM</td>
+    <td class="day">Math</td>
+    <td class="day">English</td>
+    <td class="day">Science</td>
+    <td class="day">History</td>
+    <td class="day">Physical Education</td>
+  </tr>
+  <tr>
+    <td>12:00 PM</td>
+    <td class="lunch" colspan="5">Lunch</td>
+  </tr>
+  <tr>
+    <td>2:00 PM</td>
+    <td class="day">Geography</td>
+    <td class="day">Art</td>
+    <td class="day">Physics</td>
+    <td class="day">Music</td>
+    <td class="day">Math</td>
+  </tr>
+</table>
+</body>
+</html>

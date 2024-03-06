@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Semester Subjects</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+
+    a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      text-decoration: none;
+      color: #333;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+<h2>Current Semester Subjects</h2>
+<a href="subject1.html">Subject 1</a>
+<a href="subject2.html">Subject 2</a>
+<a href="subject3.html">Subject 3</a>
+<a href="subject4.html">Subject 4</a>
+<!-- Add more subjects as needed -->
+
+<!-- Empty content for subject pages -->
+<div id="subject-content"></div>
+
+<script>
+  // JavaScript to load subject content dynamically when a link is clicked
+  document.addEventListener('DOMContentLoaded', function () {
+    var subjectLinks = document.querySelectorAll('a');
+
+    subjectLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        var subjectPage = link.getAttribute('href');
+        loadSubjectContent(subjectPage);
+      });
+    });
+
+    function loadSubjectContent(subjectPage) {
+      // You can load content dynamically here, for example:
+      document.getElementById('subject-content').innerHTML = '<h3>Loading ' + subjectPage + ' content...</h3>';
+    }
+  });
+</script>
+</body>
+</html>

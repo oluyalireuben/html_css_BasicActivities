@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyptian Airline</title>
+</head>
+<body>
+<h1>Welcome to Our Airline!</h1>
+
+<p>Explore our flight options:</p>
+
+<label for="destinationSelect">Choose a Destination:</label>
+<select id="destinationSelect" onchange="showDestinationInfo()">
+    <option value="internal">Internal Destinations</option>
+    <option value="egypt">Egypt (Domestic)</option>
+    <option value="kuwait">Kuwait</option>
+    <option value="lebanon">Lebanon</option>
+    <option value="bahrain">Bahrain</option>
+    <option value="oman">Oman</option>
+</select>
+
+<div id="destinationInfo">
+    <!-- Information about the selected destination will be displayed here -->
+</div>
+
+<script>
+    function showDestinationInfo() {
+        var select = document.getElementById("destinationSelect");
+        var destinationInfo = document.getElementById("destinationInfo");
+        var selectedValue = select.value;
+
+        // Clear previous information
+        destinationInfo.innerHTML = "";
+
+        // Display information based on the selected destination
+        switch (selectedValue) {
+            case "internal":
+                destinationInfo.innerHTML = "<p>Explore our internal flights within Egypt!</p>";
+                break;
+            case "egypt":
+                destinationInfo.innerHTML = "<p>Discover the beauty of Egypt with our domestic flights!</p>";
+                break;
+            case "kuwait":
+                destinationInfo.innerHTML = "<p>Experience the vibrant culture of Kuwait with our international flights!</p>";
+                break;
+            case "lebanon":
+                destinationInfo.innerHTML = "<p>Explore the rich history of Lebanon with our international flights!</p>";
+                break;
+            case "bahrain":
+                destinationInfo.innerHTML = "<p>Enjoy the hospitality of Bahrain with our international flights!</p>";
+                break;
+            case "oman":
+                destinationInfo.innerHTML = "<p>Discover the scenic beauty of Oman with our international flights!</p>";
+                break;
+            default:
+                destinationInfo.innerHTML = "<p>Select a destination to see more information.</p>";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iDaTos Technologies Job Application Form</title>
+</head>
+<body>
+<h1>iDaTos Technologies Job Application Form</h1>
+
+<form action="mailto:your-email@example.com" method="post">
+
+  <!-- Personal Information -->
+  <label for="position">Position Applied For:</label>
+  <input type="text" id="position" name="position" autofocus required> <br>
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="nationality">Nationality:</label>
+  <input type="text" id="nationality" name="nationality"> <br>
+
+  <label for="dob">Date of Birth:</label>
+  <input type="date" id="dob" name="dob"> <br>
+
+  <label for="address">Address:</label>
+  <textarea id="address" name="address" rows="4"></textarea> <br>
+
+  <label for="phone">Telephone Number:</label>
+  <input type="tel" id="phone" name="phone"> <br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required> <br>
+
+  <!-- Educational History and Qualifications -->
+  <h2>Educational History and Qualifications</h2>
+  <label for="education">Educational Background:</label>
+  <textarea id="education" name="education" rows="4"></textarea>
+
+  <!-- Work Experience -->
+  <h2>Work Experience/Training</h2>
+  <label for="experience">Years of Experience:</label>
+  <input type="range" id="experience" name="experience" min="0" max="10" step="1" value="0">
+  <span id="experienceValue">0</span> years
+
+  <!-- Personal Statement -->
+  <h2>Personal Statement</h2>
+  <label for="personalStatement">Personal Statement:</label>
+  <textarea id="personalStatement" name="personalStatement" rows="6"></textarea>
+
+  <!-- Referees -->
+  <h2>Referees</h2>
+
+  <!-- Referee 1 -->
+  <label for="referee1Name">Referee 1 Name:</label>
+  <input type="text" id="referee1Name" name="referee1Name">
+
+  <label for="referee1Occupation">Occupation:</label>
+  <input type="text" id="referee1Occupation" name="referee1Occupation">
+
+  <label for="referee1Relationship">Relationship:</label>
+  <input type="text" id="referee1Relationship" name="referee1Relationship">
+
+  <label for="referee1Address">Address:</label>
+  <textarea id="referee1Address" name="referee1Address" rows="4"></textarea>
+
+  <label for="referee1Phone">Telephone:</label>
+  <input type="tel" id="referee1Phone" name="referee1Phone"> <br>
+
+  <!-- Referee 2 -->
+  <label for="referee2Name">Referee 2 Name:</label>
+  <input type="text" id="referee2Name" name="referee2Name">
+
+  <label for="referee2Occupation">Occupation:</label>
+  <input type="text" id="referee2Occupation" name="referee2Occupation">
+
+  <label for="referee2Relationship">Relationship:</label>
+  <input type="text" id="referee2Relationship" name="referee2Relationship">
+
+  <label for="referee2Address">Address:</label>
+  <textarea id="referee2Address" name="referee2Address" rows="4"></textarea>
+
+  <label for="referee2Phone">Telephone:</label>
+  <input type="tel" id="referee2Phone" name="referee2Phone">
+
+  <!-- Submit Button -->
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<!-- JavaScript to display the current value of the experience slider -->
+<script>
+  var experienceInput = document.getElementById('experience');
+  var experienceValue = document.getElementById('experienceValue');
+
+  experienceInput.addEventListener('input', function () {
+    experienceValue.textContent = experienceInput.value;
+  });
+</script>
+</body>
+</html>
